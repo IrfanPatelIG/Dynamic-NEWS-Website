@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IG - NEWS</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!-- ===== Navigation Bar Container ===== -->
+    <nav>
+        <div class="main-nav container flex">
+            <div class="nav-right flex">
+                <a href="" class="logo">
+                    <img src="assets/ig-news-new.png" alt="LOGO" onclick="reload()">
+                </a>
+            </div>
+            <div class="nav-links flex">
+                <ul class="hideOnMedia flex">
+                    <li class="hover-links nav-items" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                    <li class="hover-links nav-items" id="esports" onclick="onNavItemClick('esports')">E-sports</li>
+                    <li class="hover-links nav-items" id="ai" onclick="onNavItemClick('AI')">AI</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-input" class="search-input" placeholder="Search" type="text">
+                <button id="search-btn" class="search-btn"></button>
+                <div class="menu-icon" onclick="showSideBar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                        <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <g transform="scale(5.12,5.12)">
+                        <path d="M0,7.5v5h50v-5zM0,22.5v5h50v-5zM0,37.5v5h50v-5z"></path></g></g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar Initially hidden -->
+        <ul id="side-bar" class="sidebar flex">
+            <li class="menu-close-icon flex" onclick="hideSideBar()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg>
+            </li>
+            <li class="logo flex">
+                <img src="assets/ig-news-new.png" alt="LOGO" onclick="reload()">
+            </li>
+            <li class="hover-links nav-items" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+            <li class="hover-links nav-items" id="esports" onclick="onNavItemClick('esports')">E-sports</li>
+            <li class="hover-links nav-items" id="ai" onclick="onNavItemClick('AI')">AI</li>
+        </ul>
+    </nav>
+
+    <div id="news-heading" class="news-heading container" onclick="hideSideBar()">
+        NEWS Heading - IG News
+    </div>
+
+    <!-- ===== Main Content Container ===== -->
+    <main onclick="hideSideBar()">
+        <div class="cards-container container flex" id="cards-container">
+            <!-- ===== Dynamic News Cards will be added here ===== -->
+            <!-- ===== News Card Template is at the bottom of the HTML ===== -->
+        </div>
+    </main>
+
+    <!-- ===== Template for Dynamic News Card ===== -->
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img id="news-img" src="https://placehold.co/400x200?text=NEWS" alt="NEWS image">
+            </div>
+            <div class="card-content">
+                <h3 class="news-title" id="news-title">GTA-6 Release date?</h3>
+                <h6 class="news-source" id="news-source">Take2 Interactive 10/2/25</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore nemo in optio veritatis debitis vel laborum nisi dicta temporibus eum?</p>
+            </div>
+        </div>
+    </template>
+
+    <!-- ===== JavaScript File Inclusion (JS code is untouched) ===== -->
+    <script src="Script.js"></script>
+</body>
+</html>
