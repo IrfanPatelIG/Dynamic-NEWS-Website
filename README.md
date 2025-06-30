@@ -40,8 +40,4 @@ Filter news by categories for a more tailored experience.
 
 Contributions are welcome! If you'd like to improve the project, feel free to fork the repo, create a branch, and submit a pull request.
 
-📄 License
-
-This project is licensed under the MIT License.
-
 ⭐ Don't forget to star the repo if you find it helpful!
